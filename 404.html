@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dream with Jane</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Jost:wght@400;500&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #F3EFE7; color: #2A4370;
+    font-family: 'Jost', sans-serif; text-align: center;
+    min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 24px 16px;
+  }
+  .mono-wrap { width: 120px; height: 120px; margin: 0 auto 24px; }
+  .mono { position: relative; overflow: hidden; width: 150px; height: 150px; border-radius: 50%; transform: scale(0.8); transform-origin: 0 0; }
+  .mono > svg.fill { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .mono .ring { position: absolute; inset: 7px; border: 1.5px dashed #A86F45; border-radius: 50%; }
+  .mono .stage { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+  .mono .letters { display: flex; align-items: center; transform: translate(-7.75px, 2px); }
+  .mono .d { font-family: 'Monsieur La Doulaise', cursive; font-size: 20px; color: #C8D43C; margin-right: 3px; }
+  .mono .j { font-family: 'Monsieur La Doulaise', cursive; font-size: 50px; line-height: 1; color: #C8D43C; }
+  .mono .w { font-family: 'Monsieur La Doulaise', cursive; font-size: 20px; color: #C8D43C; margin-left: 9px; }
+  p { font-size: 17px; line-height: 1.5; margin: 0 0 18px; }
+  a { color: #2A4370; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; text-decoration: none; border-bottom: 2px solid #C8D43C; padding: 0 0 3px 0.32em; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<pattern id="twill" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="3" fill="#ffffff" fill-opacity="0.09"/></pattern>
+<filter id="heather" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="5"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.2 -0.05"/></filter>
+</defs></svg>
+<div class="mono-wrap">
+  <div class="mono" role="img" aria-label="DJW monogram">
+    <svg class="fill" aria-hidden="true"><rect width="100%" height="100%" fill="#2A4370"/><rect width="100%" height="100%" fill="url(#twill)"/><rect width="100%" height="100%" filter="url(#heather)"/></svg>
+    <div class="ring"></div>
+    <div class="stage"><div class="letters"><span class="d">D</span><span class="j">J</span><span class="w">W</span></div></div>
+  </div>
+</div>
+<p>That page wandered off.</p>
+<a href="/">Back home</a>
+</body>
+</html>

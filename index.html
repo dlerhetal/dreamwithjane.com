@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dream with Jane</title>
+<meta name="description" content="Dream with Jane, a boutique for women who never stopped being cool. Readers, curated clothing and travel beauty. Chattanooga, Tennessee.">
+<meta name="theme-color" content="#2A4370">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Pinyon+Script&family=Jost:wght@400;500&display=swap">
+<style>
+  :root {
+    --denim: #2A4370;
+    --denim-deep: #1E3156;
+    --lime: #C8D43C;
+    --cognac: #A86F45;
+    --cream: #EDE3D3;
+    --cognac-light: #D29A6E;
+    --paper: #F3EFE7;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--denim);
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  .page {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 28px 16px 40px;
+  }
+  .center { display: flex; flex-direction: column; align-items: center; }
+  section { margin: 0 auto; padding: 36px 0 0; }
+
+  /* Denim fill: every .denim box carries the SVG fill as its first child */
+  .denim { position: relative; overflow: hidden; }
+  .denim > svg.fill { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+  /* Primary wordmark label */
+  .wordmark-label {
+    width: 100%;
+    max-width: 340px;
+    height: 140px;
+    border-radius: 10px;
+  }
+  .wordmark-label .inner {
+    position: absolute; inset: 0;
+    border-left: 4px solid var(--cognac);
+    border-right: 4px solid var(--cognac);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .wordmark {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 38px;
+    line-height: 1;
+    color: var(--lime);
+    transform: translateX(-1px);
+    white-space: nowrap;
+  }
+
+  /* Brand line */
+  .brand-line {
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--denim);
+    max-width: 420px;
+    margin: 28px auto 0;
+  }
+  .lime-rule {
+    display: block;
+    width: 44px; height: 3px;
+    background: var(--lime);
+    border-radius: 2px;
+    margin: 12px auto 0;
+  }
+
+  /* Section headings: Pinyon Script, dark denim on cream */
+  .script-heading {
+    font-family: 'Pinyon Script', cursive;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.3;
+    color: var(--denim);
+    margin: 0 0 20px;
+    display: block;
+  }
+  .script-heading > span {
+    display: inline-block;
+    transform: translateX(-1px);
+    white-space: nowrap;
+  }
+
+  /* Cards */
+  .cards {
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    max-width: 320px;
+    min-height: 150px;
+    border-radius: 10px;
+  }
+  .card { display: flex; }
+  .card .inner {
+    position: relative; width: 100%;
+    padding: 22px 22px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  }
+  .label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--cognac-light);
+    padding-left: 0.32em; /* balances the trailing tracking so the caps sit centered */
+  }
+  .card .text {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--cream);
+    max-width: 260px;
+  }
+  @media (min-width: 1000px) {
+    .cards { flex-direction: row; justify-content: center; align-items: stretch; }
+  }
+
+  /* About */
+  .about-body {
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .placeholder {
+    display: block;
+    border: 1.5px dashed var(--cognac);
+    border-radius: 8px;
+    padding: 18px 20px;
+    color: var(--cognac);
+    font-size: 14px;
+    letter-spacing: 0.02em;
+  }
+
+  /* Business card front */
+  .biz-card {
+    width: 100%;
+    max-width: 336px;
+    aspect-ratio: 3.5 / 2;
+    border-radius: 8px;
+  }
+  .biz-card .inner {
+    position: absolute; inset: 9px;
+    border: 1.5px dashed var(--cognac);
+    border-radius: 5px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  }
+  .biz-name {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 30px;
+    line-height: 1;
+    color: var(--lime);
+    transform: translateX(-1px);
+    white-space: nowrap;
+  }
+  .biz-email { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.04em; color: var(--cream); margin-top: 8px; }
+  .biz-phone { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.08em; color: var(--cream); }
+  .biz-site  { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--cognac-light); margin-top: 2px; padding-left: 0.32em; }
+  .biz-email:hover, .biz-phone:hover { text-decoration: underline; text-decoration-color: var(--cognac-light); text-underline-offset: 3px; }
+
+  /* DJW monogram, 150px master, scaled 0.8 inside a 120px wrapper */
+  .mono-wrap { width: 120px; height: 120px; margin: 0 auto; }
+  .mono {
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    transform: scale(0.8);
+    transform-origin: 0 0;
+  }
+  .mono .ring { position: absolute; inset: 7px; border: 1.5px dashed var(--cognac); border-radius: 50%; }
+  .mono .stage { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+  .mono .letters { display: flex; align-items: center; transform: translate(-7.75px, 2px); }
+  .mono .d { font-family: 'Monsieur La Doulaise', cursive; font-size: 20px; color: var(--lime); margin-right: 3px; }
+  .mono .j { font-family: 'Monsieur La Doulaise', cursive; font-size: 50px; line-height: 1; color: var(--lime); }
+  .mono .w { font-family: 'Monsieur La Doulaise', cursive; font-size: 20px; color: var(--lime); margin-left: 9px; }
+
+  footer { padding: 48px 0 0; }
+  .copyright { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.06em; color: var(--denim); margin-top: 18px; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<pattern id="twill" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="3" fill="#ffffff" fill-opacity="0.09"/></pattern>
+<filter id="heather" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="5"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.2 -0.05"/></filter>
+</defs></svg>
+
+<div class="page">
+
+  <!-- 1. Header: primary wordmark label -->
+  <header class="center">
+    <div class="denim wordmark-label" id="wordmark-label">
+      <svg class="fill" aria-hidden="true"><rect width="100%" height="100%" fill="#2A4370"/><rect width="100%" height="100%" fill="url(#twill)"/><rect width="100%" height="100%" filter="url(#heather)"/></svg>
+      <div class="inner"><h1 class="wordmark" id="wordmark" style="margin:0;font-weight:400;">dreamwithjane.com</h1></div>
+    </div>
+
+    <!-- 2. Brand line -->
+    <p class="brand-line">A boutique for women who never stopped being cool.</p>
+    <span class="lime-rule" aria-hidden="true"></span>
+  </header>
+
+  <!-- 3. What's coming -->
+  <section id="coming" class="center">
+    <h2 class="script-heading" id="coming-heading"><span>What's coming</span></h2>
+    <div class="cards">
+      <article class="denim card">
+        <svg class="fill" aria-hidden="true"><rect width="100%" height="100%" fill="#2A4370"/><rect width="100%" height="100%" fill="url(#twill)"/><rect width="100%" height="100%" filter="url(#heather)"/></svg>
+        <div class="inner">
+          <div class="label">Readers</div>
+          <p class="text" style="margin:0;">Chunky, colorful reading glasses and the chains to match.</p>
+        </div>
+      </article>
+      <article class="denim card">
+        <svg class="fill" aria-hidden="true"><rect width="100%" height="100%" fill="#2A4370"/><rect width="100%" height="100%" fill="url(#twill)"/><rect width="100%" height="100%" filter="url(#heather)"/></svg>
+        <div class="inner">
+          <div class="label">The Edit</div>
+          <p class="text" style="margin:0;">Curated clothing: a little funky, a little weird, still ready for the boardroom.</p>
+        </div>
+      </article>
+      <article class="denim card">
+        <svg class="fill" aria-hidden="true"><rect width="100%" height="100%" fill="#2A4370"/><rect width="100%" height="100%" fill="url(#twill)"/><rect width="100%" height="100%" filter="url(#heather)"/></svg>
+        <div class="inner">
+          <div class="label">Travel Beauty</div>
+          <p class="text" style="margin:0;">A travel makeup subscription for women on the move. Coming soon.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 4. Who's Jane? -->
+  <section id="about" class="center">
+    <h2 class="script-heading" id="about-heading"><span>Who's Jane?</span></h2>
+    <div class="about-body">
+      <span class="placeholder">[LAURA'S STORY GOES HERE. Jane is her middle name; the brand is her.]</span>
+    </div>
+  </section>
+
+  <!-- 5. Contact: business card front -->
+  <section id="contact" class="center">
+    <h2 class="script-heading" id="contact-heading"><span style="transform:translateX(1px);">Say hello</span></h2>
+    <div class="denim biz-card" id="biz-card">
+      <svg class="fill" aria-hidden="true"><rect width="100%" height="100%" fill="#2A4370"/><rect width="100%" height="100%" fill="url(#twill)"/><rect width="100%" height="100%" filter="url(#heather)"/></svg>
+      <div class="inner">
+        <span class="biz-name" id="biz-name">Laura Jane Linn</span>
+        <a class="biz-email" href="mailto:laura@dreamwithjane.com">laura@dreamwithjane.com</a>
+        <a class="biz-phone" href="tel:+19046734698">+1 (904) 673-4698</a>
+        <span class="biz-site">dreamwithjane.com</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Footer: monogram + copyright -->
+  <footer class="center">
+    <div class="mono-wrap" id="mono-wrap">
+      <div class="denim mono" id="mono" role="img" aria-label="DJW monogram">
+        <svg class="fill" aria-hidden="true"><rect width="100%" height="100%" fill="#2A4370"/><rect width="100%" height="100%" fill="url(#twill)"/><rect width="100%" height="100%" filter="url(#heather)"/></svg>
+        <div class="ring"></div>
+        <div class="stage">
+          <div class="letters">
+            <span class="d">D</span><span class="j">J</span><span class="w">W</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 Dream with Jane</p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150">
+<defs>
+<pattern id="twill" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="7" height="3" fill="#ffffff" fill-opacity="0.09"/></pattern>
+<clipPath id="disc"><circle cx="75" cy="75" r="75"/></clipPath>
+</defs>
+<g clip-path="url(#disc)">
+<rect width="150" height="150" fill="#2A4370"/>
+<rect width="150" height="150" fill="url(#twill)"/>
+</g>
+<circle cx="75" cy="75" r="67.25" fill="none" stroke="#A86F45" stroke-width="1.5" stroke-dasharray="4 3"/>
+<g fill="#C8D43C" font-family="'Monsieur La Doulaise','Brush Script MT','Segoe Script',cursive" text-anchor="middle">
+<text x="49" y="83" font-size="22">D</text>
+<text x="74" y="95" font-size="58">J</text>
+<text x="103" y="83" font-size="22">W</text>
+</g>
+</svg>
